@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Typography */
+    --family: 'Inter', sans-serif;
+    --fw-normal: 400;
+    --fw-bold: 700;
+    --fs-base: 14px;
+
+    ---radius-top-bg: 1rem;
+    --radius-card: 0.5rem;
+
+    /* Colors */
+    --colors-positive: hsl(163, 72%, 41%);
+    --colors-negative: hsl(356, 69%, 56%);
+
+    --colors-facebook: hsl(208, 92%, 53%);
+    --colors-twitter: hsl(203, 89%, 53%);
+    --colors-instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    --colors-youtube: hsl(348, 97%, 39%);
+}
+
+body {
+    --colors-text-pale: hsl(228, 34%, 66%);
+    --colors-text-bright: hsl(0, 0%, 100%);
+
+    --colors-bg: hsl(230, 17%, 14%);
+    --colors-top-bg: hsl(232, 19%, 15%);
+    --colors-card-bg: hsl(228, 28%, 20%);
+    --colors-card-bg-active: hsl(228, 30%, 22%);
+
+    --colors-toggle-bg: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --colors-toggle-bg-active: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --colors-toggle-bg-hover: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --colors-toggle-pin: hsl(232, 19%, 15%);
+    --colors-toggle-pin-hover: hsl(228, 30%, 22%);
+
+    --colors-theme-indicator:hsl(228, 34%, 66%);
+    --colors-theme-indicator-hover:hsl(0, 0%, 100%);
+
+}
+
+body.light-mode {
+    --colors-text-pale: hsl(228, 12%, 44%);
+    --colors-text-bright: hsl(230, 17%, 14%);
+
+    --colors-bg: hsl(0, 0%, 100%);
+    --colors-top-bg: hsl(225, 100%, 98%);
+    --colors-card-bg: hsl(227, 47%, 96%);
+    --colors-card-bg-active: hsl(227, 45%, 94%);
+
+    --colors-toggle-bg: hsl(230, 22%, 74%);
+    --colors-toggle-bg-active: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --colors-toggle-bg-hover: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --colors-toggle-pin: hsl(227, 47%, 96%);
+    --colors-toggle-pin-hover: hsl(227, 47%, 96%);
+
+    --colors-theme-indicator:hsl(228, 12%, 44%);
+    --colors-theme-indicator-hover:hsl(228, 12%, 44%);
+}
+
+body {
+    margin: 0;
+
+    background-color: var(--colors-bg);
+
+    font-family: var(--family);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-bold);
+    color: var(--colors-text-pale);
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+.top-bg {
+  min-height: 230px;
+  background-color: var(--colors-top-bg);
+  border-bottom-left-radius: var(---radius-top-bg);
+  border-bottom-right-radius: var(---radius-top-bg);
+}
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  top: -230px;
+}
+
+.dashboard__content {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+
+  font-size: 0.8rem;
+
+  display: grid;
+  justify-content: center;
+  align-items: flex-start;
+  grid-template-columns: repeat(1, minmax(300px, 330px));
+}
+
+header {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+header .title {
+  border-bottom: 1px solid var(--colors-text-pale);
+  padding-bottom: 1.3rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+header .theme-switcher {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+header .title h1 {
+  margin: 0;
+  color: var(--colors-text-bright);
+}
+
+header .title p {
+  margin: 0;
+
+  color: var(--colors-text-pale);
+}
+
+main {
+  padding-top: 2rem;
+}
+
+.positive {
+  color: var(--colors-positive)
+}
+.negative {
+  color: var(--colors-negative)
+}
+
+.followers {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.followers-card__wrapper {
+  width: 100%;
+
+  border-radius: var(--radius-card);
+  padding-top: 0.1rem;
+  background: white;
+}
+.followers-card__wrapper--facebook {
+  background: var(--colors-facebook);
+}
+.followers-card__wrapper--twitter {
+  background: var(--colors-twitter);
+}
+.followers-card__wrapper--instagram {
+  background: var(--colors-instagram);
+}
+.followers-card__wrapper--youtube {
+  background: var(--colors-youtube);
+}
+
+.followers-card__wrapper:hover .followers-card {
+  background: var(--colors-card-bg-active);
+  cursor: pointer;
+}
+
+.followers-card {
+  width: 100%;
+  height: 100%;
+
+  background: var(--colors-card-bg);
+  padding: 1.5rem 0;
+  border-bottom-left-radius: var(--radius-card);
+  border-bottom-right-radius: var(--radius-card);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  position: relative;
+  bottom: -2px;
+}
+
+.followers-card__top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.followers-card__middle {
+  text-align: center;
+  font-weight: var(--fw-normal);
+}
+
+.followers-card__middle > span {
+  display: block;
+}
+
+.followers-card__followers-count {
+  font-size: 2.9rem;
+  color: var(--colors-text-bright);
+  font-weight: var(--fw-bold);
+}
+
+.followers-card__followers-lable {
+  font-weight: var(--fw-normal);
+  font-size: 0.7rem;
+}
+
+.followers-card__bottom {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.overview-today {
+  padding: 2.5rem 0;
+}
+
+body .overview-today h2 {
+  color: var(--colors-text-bright);
+  margin-bottom: 1rem;
+}
+body.light-mode .overview-today h1 {
+  color: var(--colors-text-pale);
+}
+
+
+.overview-today__card-list {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.overview-today-card {
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  background: var(--colors-card-bg);
+}
+
+.overview-today-card:hover {
+  background: var(--colors-card-bg-active);
+  cursor: pointer;
+}
+
+
+.overview-today-card__top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;;
+}
+
+.overview-today-card__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overview-today-card__count {
+  color: var(--colors-text-bright);
+  font-size: 1.5rem;;
+}
+
+
+
+footer {
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+}
+/*===================================*/
+/*              Switch               */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 21px;
+}
+
+/* Hide default HTML checkbox */
+.switch__checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.switch__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--colors-toggle-bg);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch__slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 3px;
+  bottom: 3px;
+  background: var(--colors-toggle-pin);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch__slider:hover::before {
+  background: var(--colors-toggle-pin-hover);
+  cursor: pointer;
+}
+
+.switch:hover + .theme-indicator {
+  color: var(--colors-theme-indicator-hover);
+}
+
+.switch__checkbox:checked + .switch__slider {
+  background: var(--colors-toggle-bg);
+}
+
+/*
+.switch__checkbox:focus + .switch__slider {
+  background: var(--colors-toggle-bg-active);
+  cursor: pointer;
+}
+*/
+.switch__checkbox:hover + .switch__slider {
+  background: var(--colors-toggle-bg-hover);
+  cursor: pointer;
+}
+
+.switch__checkbox:checked + .switch__slider:before {
+  -webkit-transform: translateX(19px);
+  -ms-transform: translateX(19px);
+  transform: translateX(19px);
+}
+
+/* Rounded sliders */
+.switch__slider--round {
+  border-radius: 34px;
+}
+
+.switch__slider--round:before {
+  border-radius: 50%;
+} 
+/*                                   */
+/*===================================*/
+
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header .title {
+    border-bottom: none;
+  }
+
+  header .theme-switcher {
+    padding-top: 0.8rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items:baseline;
+    gap: 0.75rem;
+    color: var(--colors-theme-indicator)
+  }
+
+  .dashboard__content {
+    grid-template-columns: 1fr;
+  }
+
+  .followers {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .overview-today__card-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  
+  .theme-switcher__current-mode {
+    position:relative;
+    top: 2px;
+  }
+}

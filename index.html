@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="stylesheet" href="./styles.css">
+
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+</head>
+<body>
+  <div class="top-bg"></div>
+  <div class="dashboard">
+    <div class="dashboard__content">
+      <header>
+        <section class="title">
+          <h1>Social Media Dashboard</h1>
+          <p>Total Followers: 23,004</p>
+        </section>
+        <section class="theme-switcher">
+          <label class="switch">
+            <input class="switch__checkbox" id="theme-switcher" type="checkbox" onclick="toggleTheme()">
+            <span class="switch__slider switch__slider--round"></span>
+          </label>
+          <span class="theme-indicator">Dark Mode</span>
+        </section>
+      </header>
+      <main>
+        <section class="followers">
+          <div class="followers-card__wrapper followers-card__wrapper--facebook">
+            <article class="followers-card">
+              <div class="followers-card__top">
+                <img src="./images/icon-facebook.svg" alt="facebook">
+                <span class="followers-card__username">@nathanf</span>
+              </div>
+              <div class="followers-card__middle">
+                <span class="followers-card__followers-count">1987</span>
+                <span class="followers-card__followers-lable">F O L L O W E R S</span>
+              </div>
+              <div class="followers-card__bottom">
+                <img src="./images/icon-up.svg" alt="up">
+                <span class="positive">12 today</span>
+              </div>
+            </article>
+          </div>
+          <div class="followers-card__wrapper followers-card__wrapper--twitter">
+            <article class="followers-card">
+              <div class="followers-card__top">
+                <img src="./images/icon-twitter.svg" alt="twitter">
+                <span class="followers-card__username">@nathanf</span>
+              </div>
+              <div class="followers-card__middle">
+                <span class="followers-card__followers-count">1044</span>
+                <span class="followers-card__followers-lable">F O L L O W E R S</span>
+              </div>
+              <div class="followers-card__bottom">
+                <img src="./images/icon-up.svg" alt="up">
+                <span class="positive">99 today</span>
+              </div>
+            </article>
+          </div>      
+          <div class="followers-card__wrapper followers-card__wrapper--instagram">
+            <article class="followers-card">
+              <div class="followers-card__top">
+                <img src="./images/icon-instagram.svg" alt="instagram">
+                <span class="followers-card__username">@realnathanf</span>
+              </div>
+              <div class="followers-card__middle">
+                <span class="followers-card__followers-count">11K</span>
+                <span class="followers-card__followers-lable">F O L L O W E R S</span>
+              </div>
+              <div class="followers-card__bottom">
+                <img src="./images/icon-up.svg" alt="up">
+                <span class="positive">1099 today</span>
+              </div>
+            </article>
+          </div>
+          <div class="followers-card__wrapper followers-card__wrapper--youtube">
+            <article class="followers-card">
+              <div class="followers-card__top">
+                <img src="./images/icon-youtube.svg" alt="youtube">
+                <span class="followers-card__username">Nathan F.</span>
+              </div>
+              <div class="followers-card__middle">
+                <span class="followers-card__followers-count">8239</span>
+                <span class="followers-card__followers-lable">S U B S C R I B E R S</span>
+              </div>
+              <div class="followers-card__bottom">
+                <img src="./images/icon-down.svg" alt="down">
+                <span class="negative">144 today</span>
+              </div>
+            </article>
+          </div>      
+        </section>
+        <section class="overview-today">
+          <h2>Overview - Today</h2>
+          <div class="overview-today__card-list">     
+            <article class="overview-today-card">
+              <div class="overview-today-card__top">
+                <span class="overview-today-card__activity">Page Views</span>
+                <img class="overview-today-card__social-network-logo" src="./images/icon-facebook.svg" alt="facebook">          
+              </div>
+              <div class="overview-today-card__bottom">
+                <span class="overview-today-card__count">87</span>
+                <div class="overview-today-card__change">
+                  <img src="./images/icon-up.svg" alt="up">
+                  <span class="positive">3%</span> 
+                </div>
+              </div>
+            </article>
+            <article class="overview-today-card">
+              <div class="overview-today-card__top">
+                <span class="overview-today-card__activity">Likes</span>
+                <img class="overview-today-card__social-network-logo" src="./images/icon-facebook.svg" alt="facebook">          
+              </div>
+              <div class="overview-today-card__bottom">
+                <span class="overview-today-card__count">52</span>
+                <div class="overview-today-card__change">
+                  <img src="./images/icon-down.svg" alt="up">
+                  <span class="negative">2%</span> 
+                </div>
+              </div>
+            </article>
+            <article class="overview-today-card">
+              <div class="overview-today-card__top">
+                <span class="overview-today-card__activity">Likes</span>
+                <img class="overview-today-card__social-network-logo" src="./images/icon-instagram.svg" alt="instagram">          
+              </div>
+              <div class="overview-today-card__bottom">
+                <span class="overview-today-card__count">5462</span>
+                <div class="overview-today-card__change">
+                  <img src="./images/icon-up.svg" alt="up">
+                  <span class="positive">2257%</span> 
+                </div>
+              </div>
+            </article>
+            <article class="overview-today-card">
+              <div class="overview-today-card__top">
+                <span class="overview-today-card__activity">Profile Views</span>
+                <img class="overview-today-card__social-network-logo" src="./images/icon-instagram.svg" alt="instagram">          
+              </div>
+              <div class="overview-today-card__bottom">
+                <span class="overview-today-card__count">52K</span>
+                <div class="overview-today-card__change">
+                  <img src="./images/icon-up.svg" alt="up">
+                  <span class="positive">1375%</span> 
+                </div>
+              </div>
+            </article>
+            <article class="overview-today-card">
+              <div class="overview-today-card__top">
+                <span class="overview-today-card__activity">Retweets</span>
+                <img class="overview-today-card__social-network-logo" src="./images/icon-twitter.svg" alt="twitter">          
+              </div>
+              <div class="overview-today-card__bottom">
+                <span class="overview-today-card__count">117</span>
+                <div class="overview-today-card__change">
+                  <img src="./images/icon-up.svg" alt="up">
+                  <span class="positive">303%</span> 
+                </div>
+              </div>
+            </article>
+            <article class="overview-today-card">
+              <div class="overview-today-card__top">
+                <span class="overview-today-card__activity">Likes</span>
+                <img class="overview-today-card__social-network-logo" src="./images/icon-twitter.svg" alt="twitter">          
+              </div>
+              <div class="overview-today-card__bottom">
+                <span class="overview-today-card__count">507</span>
+                <div class="overview-today-card__change">
+                  <img src="./images/icon-up.svg" alt="up">
+                  <span class="positive">553%</span> 
+                </div>
+              </div>
+            </article>
+            <article class="overview-today-card">
+              <div class="overview-today-card__top">
+                <span class="overview-today-card__activity">Likes</span>
+                <img class="overview-today-card__social-network-logo" src="./images/icon-youtube.svg" alt="youtube">          
+              </div>
+              <div class="overview-today-card__bottom">
+                <span class="overview-today-card__count">107</span>
+                <div class="overview-today-card__change">
+                  <img src="./images/icon-down.svg" alt="up">
+                  <span class="negative">19%</span> 
+                </div>
+              </div>
+            </article>
+            <article class="overview-today-card">
+              <div class="overview-today-card__top">
+                <span class="overview-today-card__activity">Total Views</span>
+                <img class="overview-today-card__social-network-logo" src="./images/icon-youtube.svg" alt="youtube">          
+              </div>
+              <div class="overview-today-card__bottom">
+                <span class="overview-today-card__count">1407</span>
+                <div class="overview-today-card__change">
+                  <img src="./images/icon-down.svg" alt="up">
+                  <span class="negative">12%</span> 
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. </p>
+        <p>Coded by <a href="#">Val Maly</a>.</p>
+      </footer>
+    </div>
+  </div>
+
+
+  <script>
+    //Set theme switch to initially dark-mode position
+    document.getElementById("theme-switcher").checked = false;
+
+    function toggleTheme() {
+      document.body.classList.toggle("light-mode");
+    }
+  </script>
+</body>
+</html>
