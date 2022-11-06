@@ -20,18 +20,18 @@
           <h1>Social Media Dashboard</h1>
           <p>Total Followers: 23,004</p>
         </section>
-        <section class="theme-switcher">
+        <div class="theme-switcher">
           <label class="switch">
             <input class="switch__checkbox" id="theme-switcher" type="checkbox" onclick="toggleTheme()">
             <span class="switch__slider switch__slider--round"></span>
           </label>
-          <span class="theme-indicator">Dark Mode</span>
-        </section>
+          <label for="theme-switcher" class="theme-indicator">Dark Mode</label>
+        </div>
       </header>
       <main>
         <section class="followers">
           <div class="followers-card__wrapper followers-card__wrapper--facebook">
-            <article class="followers-card">
+            <div class="followers-card">
               <div class="followers-card__top">
                 <img src="./images/icon-facebook.svg" alt="facebook">
                 <span class="followers-card__username">@nathanf</span>
@@ -44,10 +44,10 @@
                 <img src="./images/icon-up.svg" alt="up">
                 <span class="positive">12 today</span>
               </div>
-            </article>
+            </div>
           </div>
           <div class="followers-card__wrapper followers-card__wrapper--twitter">
-            <article class="followers-card">
+            <div class="followers-card">
               <div class="followers-card__top">
                 <img src="./images/icon-twitter.svg" alt="twitter">
                 <span class="followers-card__username">@nathanf</span>
@@ -60,10 +60,10 @@
                 <img src="./images/icon-up.svg" alt="up">
                 <span class="positive">99 today</span>
               </div>
-            </article>
+            </div>
           </div>      
           <div class="followers-card__wrapper followers-card__wrapper--instagram">
-            <article class="followers-card">
+            <div class="followers-card">
               <div class="followers-card__top">
                 <img src="./images/icon-instagram.svg" alt="instagram">
                 <span class="followers-card__username">@realnathanf</span>
@@ -76,10 +76,10 @@
                 <img src="./images/icon-up.svg" alt="up">
                 <span class="positive">1099 today</span>
               </div>
-            </article>
+            </div>
           </div>
           <div class="followers-card__wrapper followers-card__wrapper--youtube">
-            <article class="followers-card">
+            <div class="followers-card">
               <div class="followers-card__top">
                 <img src="./images/icon-youtube.svg" alt="youtube">
                 <span class="followers-card__username">Nathan F.</span>
@@ -92,13 +92,13 @@
                 <img src="./images/icon-down.svg" alt="down">
                 <span class="negative">144 today</span>
               </div>
-            </article>
+            </div>
           </div>      
         </section>
         <section class="overview-today">
           <h2>Overview - Today</h2>
           <div class="overview-today__card-list">     
-            <article class="overview-today-card">
+            <div class="overview-today-card">
               <div class="overview-today-card__top">
                 <span class="overview-today-card__activity">Page Views</span>
                 <img class="overview-today-card__social-network-logo" src="./images/icon-facebook.svg" alt="facebook">          
@@ -110,8 +110,8 @@
                   <span class="positive">3%</span> 
                 </div>
               </div>
-            </article>
-            <article class="overview-today-card">
+            </div>
+            <div class="overview-today-card">
               <div class="overview-today-card__top">
                 <span class="overview-today-card__activity">Likes</span>
                 <img class="overview-today-card__social-network-logo" src="./images/icon-facebook.svg" alt="facebook">          
@@ -123,8 +123,8 @@
                   <span class="negative">2%</span> 
                 </div>
               </div>
-            </article>
-            <article class="overview-today-card">
+            </div>
+            <div class="overview-today-card">
               <div class="overview-today-card__top">
                 <span class="overview-today-card__activity">Likes</span>
                 <img class="overview-today-card__social-network-logo" src="./images/icon-instagram.svg" alt="instagram">          
@@ -136,8 +136,8 @@
                   <span class="positive">2257%</span> 
                 </div>
               </div>
-            </article>
-            <article class="overview-today-card">
+            </div>
+            <div class="overview-today-card">
               <div class="overview-today-card__top">
                 <span class="overview-today-card__activity">Profile Views</span>
                 <img class="overview-today-card__social-network-logo" src="./images/icon-instagram.svg" alt="instagram">          
@@ -149,8 +149,8 @@
                   <span class="positive">1375%</span> 
                 </div>
               </div>
-            </article>
-            <article class="overview-today-card">
+            </div>
+            <div class="overview-today-card">
               <div class="overview-today-card__top">
                 <span class="overview-today-card__activity">Retweets</span>
                 <img class="overview-today-card__social-network-logo" src="./images/icon-twitter.svg" alt="twitter">          
@@ -162,8 +162,8 @@
                   <span class="positive">303%</span> 
                 </div>
               </div>
-            </article>
-            <article class="overview-today-card">
+            </div>
+            <div class="overview-today-card">
               <div class="overview-today-card__top">
                 <span class="overview-today-card__activity">Likes</span>
                 <img class="overview-today-card__social-network-logo" src="./images/icon-twitter.svg" alt="twitter">          
@@ -175,8 +175,8 @@
                   <span class="positive">553%</span> 
                 </div>
               </div>
-            </article>
-            <article class="overview-today-card">
+            </div>
+            <div class="overview-today-card">
               <div class="overview-today-card__top">
                 <span class="overview-today-card__activity">Likes</span>
                 <img class="overview-today-card__social-network-logo" src="./images/icon-youtube.svg" alt="youtube">          
@@ -188,8 +188,8 @@
                   <span class="negative">19%</span> 
                 </div>
               </div>
-            </article>
-            <article class="overview-today-card">
+            </div>
+            <div class="overview-today-card">
               <div class="overview-today-card__top">
                 <span class="overview-today-card__activity">Total Views</span>
                 <img class="overview-today-card__social-network-logo" src="./images/icon-youtube.svg" alt="youtube">          
@@ -201,7 +201,7 @@
                   <span class="negative">12%</span> 
                 </div>
               </div>
-            </article>
+            </div>
           </div>
         </section>
       </main>
