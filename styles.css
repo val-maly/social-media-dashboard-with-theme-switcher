@@ -75,7 +75,7 @@ body {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 h2 {
@@ -100,7 +100,7 @@ h2 {
 
 .dashboard__content {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1024px;
   margin: 0 auto;
 
   font-size: 0.8rem;
@@ -240,7 +240,7 @@ main {
 }
 
 .overview-today {
-  padding: 2.5rem 0;
+  padding: 1.7rem 0;
 }
 
 body .overview-today h2 {
